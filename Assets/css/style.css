@@ -78,8 +78,9 @@ img {
 }
 
 .form-control{
-  width: 200px;
-  height: 50px;
+  width: 400px;
+  height: 30px;
+  background-color: #d3d3d3;
 }
 
 .save{
