@@ -1,7 +1,15 @@
 var display3El = $('.display-3');
 var leadEl = $('.lead');
 var currentDayEl = $('#day-display');
-var eventNameEl = $('input[name="enter-event"]');
+var eventNameEl = $('input[name="event-name-input"]');
+var eventNameEl1 = $('input[name="event-name-input1"]');
+var eventNameEl2 = $('input[name="event-name-input2"]');
+var eventNameEl3 = $('input[name="event-name-input3"]');
+var eventNameEl4 = $('input[name="event-name-input4"]');
+var eventNameEl5 = $('input[name="event-name-input5"]');
+var eventNameEl6 = $('input[name="event-name-input6"]');
+var eventNameEl7 = $('input[name="event-name-input7"]');
+var eventNameEl8 = $('input[name="event-name-input8"]');
 var eventColor = $('.form-input');
 var timeEl = $('#time-hh');
 var time1El = $('#time-h1');
@@ -17,9 +25,35 @@ var event1DescEl = $('#eventDesc1');
 var saveEventEl = $('#save');
 var eventsListEl = $('#events-list');
 var eventDescEl = $(".eventDesc");
+//var eventDescEl1 = $("#eventDesc1");
+var event2DescEl = $("#eventDesc2");
+var event3DescEl = $("#eventDesc3");
+var event4DescEl = $("#eventDesc4");
+var event5DescEl = $("#eventDesc5");
+var event6DescEl = $("#eventDesc6");
+var event7DescEl = $("#eventDesc7");
+var event8DescEl = $("#eventDesc8");
+var event9DescEl = $("#eventDesc9");
 var eventDisplayEl = $('#event-display');
 var eventNameInputEl = $('#event-name-input');
-
+var appendEventEl = $('#append-event');
+var appendEventEl1 = $('#append-event1');
+var appendEventEl2 = $('#append-event2');
+var appendEventEl3 = $('#append-event3');
+var appendEventEl4 = $('#append-event4');
+var appendEventEl5 = $('#append-event5');
+var appendEventEl6 = $('#append-event6');
+var appendEventEl7 = $('#append-event7');
+var appendEventEl8 = $('#append-event8');
+var shoppingFormEl = $('#shopping-form');
+var shoppingFormEl1 = $('#shopping-form1');
+var shoppingFormEl2 = $('#shopping-form2');
+var shoppingFormEl3 = $('#shopping-form3');
+var shoppingFormEl4 = $('#shopping-form4');
+var shoppingFormEl5 = $('#shopping-form5');
+var shoppingFormEl6 = $('#shopping-form6');
+var shoppingFormEl7 = $('#shopping-form7');
+var shoppingFormEl8 = $('#shopping-form8');
 
 // handle displaying the time
 /*function displayTime() {
@@ -33,125 +67,358 @@ currentDayEl.text(dayWeek);
 //var today = moment();
 //$("#1a").text(today.format("MMM Do, YYYY"));
 
-var time = moment().format("hh A");
-var time1ToCompare = moment(time1El.text(),["hA"]).format("hh A");
-var time2ToCompare = moment(time2El.text(),["hA"]).format("hh A");
-var time3ToCompare = moment(time3El.text(),["hA"]).format("hh A");
-var time4ToCompare = moment(time4El.text(),["hA"]).format("hh A");
-var time5ToCompare = moment(time5El.text(),["hA"]).format("hh A");
-var time6ToCompare = moment(time6El.text(),["hA"]).format("hh A");
-var time7ToCompare = moment(time7El.text(),["hA"]).format("hh A");
-var time8ToCompare = moment(time8El.text(),["hA"]).format("hh A");
-var time9ToCompare = moment(time9El.text(),["hA"]).format("hh A");
+var time = moment().format("HH A");
+var time1ToCompare = moment(time1El.text(),["hA"]).format("HH A");
+var time2ToCompare = moment(time2El.text(),["hA"]).format("HH A");
+var time3ToCompare = moment(time3El.text(),["hA"]).format("HH A");
+var time4ToCompare = moment(time4El.text(),["hA"]).format("HH A");
+var time5ToCompare = moment(time5El.text(),["hA"]).format("HH A");
+var time6ToCompare = moment(time6El.text(),["hA"]).format("HH A");
+var time7ToCompare = moment(time7El.text(),["hA"]).format("HH A");
+var time8ToCompare = moment(time8El.text(),["hA"]).format("HH A");
+var time9ToCompare = moment(time9El.text(),["hA"]).format("HH A");
 //timeEl = time.value;
 console.log(time); 
 console.log(time1El.text());
 console.log(time1ToCompare == time);
 console.log(time2ToCompare == time);
 console.log(time3ToCompare == time);
-console.log(eventDescEl);
+console.log(time5ToCompare > time);
 //console.log(time1ToCompare.isBefore(time));
-function CompareTime(time1ToCompare){
+function CompareTime1(time1ToCompare){
 if(time1ToCompare == time){
-  event1DescEl.css('background-color', 'red');
+  event1DescEl.css('background-color', '#ff6961');
 }
 else if (time1ToCompare < time) {
-  event1DescEl.css('background-color', 'grey');
+  event1DescEl.css('background-color', '#adadad');
 }
 else if (time1ToCompare > time){
-  event1DescEl.css('background-color', 'green');
+  event1DescEl.css('background-color', '#65d486');
 }
 }
 
-/*function CompareTime(time2ToCompare){
+function CompareTime2(time2ToCompare){
   if(time2ToCompare == time){
-    eventDescEl.css('background-color', 'red');
+    event2DescEl.css('background-color', '#ff6961');
   }
-  else if (time2ToCompare.isBefore(time)) {
-    eventDescEl.css('background-color', 'grey');
+  else if (time2ToCompare < time) {
+    event2DescEl.css('background-color', '#adadad');
   }
-  else if (time2ToCompare.isAfter(time)){
-    eventDescEl.css('background-color', 'green');
+  else if (time2ToCompare > time) {
+    event2DescEl.css('background-color', '#65d486');
   }
   }
 
-function CompareTime(time3ToCompare){
+function CompareTime3(time3ToCompare){
     if(time3ToCompare == time){
-      eventDescEl.css('background-color', 'red');
+      event3DescEl.css('background-color', '#ff6961');
     }
-    else if (time1ToCompare.isBefore(time)) {
-      eventDescEl.css('background-color', 'grey');
+    else if (time3ToCompare < time) {
+      event3DescEl.css('background-color', '#adadad');
     }
-    else if (time1ToCompare.isAfter(time)){
-      eventDescEl.css('background-color', 'green');
+    else if (time3ToCompare > time){
+      event3DescEl.css('background-color', '#65d486');
     }
 }
 
-function CompareTime(time4ToCompare){
+function CompareTime4(time4ToCompare){
       if(time4ToCompare == time){
-        eventDescEl.css('background-color', 'red');
+        event4DescEl.css('background-color', '#ff6961');
       }
-      else if (time1ToCompare.isBefore(time)) {
-        eventDescEl.css('background-color', 'grey');
+      else if (time4ToCompare < time) {
+        event4DescEl.css('background-color', '#adadad');
       }
-      else if (time1ToCompare.isAfter(time)){
-        eventDescEl.css('background-color', 'green');
+      else if (time4ToCompare > time){
+        event4DescEl.css('background-color', '#65d486');
       }
 }
 
-CompareTime(time1ToCompare);
-CompareTime(time2ToCompare);
-CompareTime(time3ToCompare);
-CompareTime(time4ToCompare);
-*/
+function CompareTime5(time5ToCompare){
+  if(time5ToCompare == time){
+    event5DescEl.css('background-color', '#ff6961');
+  }
+  else if (time5ToCompare < time) {
+    event5DescEl.css('background-color', '#adadad');
+  }
+  else if (time5ToCompare > time){
+    event5DescEl.css('background-color', '#65d486');
+    //event5DescEl.addClass('table-success');
+  }
+}
 
-/*function handleFormSubmit(event) {
-  // Prevent the default behavior
+function CompareTime6(time6ToCompare){
+  if(time6ToCompare == time){
+    event6DescEl.css('background-color', '#ff6961');
+  }
+  else if (time6ToCompare < time) {
+    event6DescEl.css('background-color', '#adadad');
+  }
+  else if (time6ToCompare > time){
+    event6DescEl.css('background-color', '#65d486');
+  }
+}
+
+function CompareTime7(time7ToCompare){
+  if(time7ToCompare == time){
+    event7DescEl.css('background-color', '#ff6961');
+  }
+  else if (time7ToCompare < time) {
+    event7DescEl.css('background-color', '#adadad');
+  }
+  else if (time7ToCompare > time){
+    event7DescEl.css('background-color', '#65d486');
+  }
+}
+
+function CompareTime8(time8ToCompare){
+  if(time8ToCompare == time){
+    event8DescEl.css('background-color', '#ff6961');
+  }
+  else if (time8ToCompare < time) {
+    event8DescEl.css('background-color', '#adadad');
+  }
+  else if (time8ToCompare > time){
+    event8DescEl.css('background-color', '#65d486');
+  }
+}
+
+function CompareTime9(time9ToCompare){
+  if(time9ToCompare == time){
+    event9DescEl.css('background-color', '#ff6961');
+  }
+  else if (time9ToCompare < time) {
+    event9DescEl.css('background-color', '#adadad');
+  }
+  else if (time9ToCompare > time){
+    event9DescEl.css('background-color', '#65d486');
+  }
+}
+
+CompareTime1(time1ToCompare);
+CompareTime2(time2ToCompare);
+CompareTime3(time3ToCompare);
+CompareTime4(time4ToCompare);
+CompareTime5(time5ToCompare);
+CompareTime6(time6ToCompare);
+CompareTime7(time7ToCompare);
+CompareTime8(time8ToCompare);
+CompareTime9(time9ToCompare);
+
+
+
+// create function to handle form submission
+function handleFormSubmit(event) {
   event.preventDefault();
 
-  console.log('Enter Event:', eventNameEl.val());
+  // select form element by its `name` attribute and get its value
+  var eventItem = $(eventNameEl).val();
 
+  //eventNameInputEl.setAttribute("style", "display: none");
+  // if there's nothing in the form entered, don't print to the page
+  if (!eventItem) {
+    console.log('No shopping item filled out in form!');
+    return;
+  }
+  // print to the page
+  appendEventEl.append('<li>' + eventItem + '</li>');
+
+  //appendEventEl.setAttribute("style", "display: block");
+
+  // clear the form input element
+  $(eventNameEl).val(''); 
+ 
 }
+// Create a submit event listener on the form element
+shoppingFormEl.on('submit', handleFormSubmit);
 
-// Submit event on the form
-
-
-var printSkills = function (name) {
-  var listEl = $('<li>');
-  var listDetail = name;
-  listEl.addClass('list-group-item').text(listDetail);
-  listEl.appendTo(eventsListEl);
-};
-
-var handleFormSubmit = function (event) {
+function handleFormSubmit1(event) {
   event.preventDefault();
 
-  var eventInput = eventNameEl.val();
+  // select form element by its `name` attribute and get its value
+  var eventItem1 = $(eventNameEl1).val();
 
-  printSkills(eventInput);
+  //eventNameInputEl.setAttribute("style", "display: none");
+  // if there's nothing in the form entered, don't print to the page
+  if (!eventItem1) {
+    console.log('No shopping item filled out in form!');
+    return;
+  }
+  // print to the page
+  appendEventEl1.append('<li>' + eventItem1 + '</li>');
 
-};
-*/
-function printEventData(event) {
-  var eventRowEl = $('<tr>');
+  //appendEventEl.setAttribute("style", "display: block");
 
-  var eventNameTdEl = $('<td>').addClass('p-2').text(event);
-
-  eventRowEl.append(
-    eventNameTdEl
-  );
-
-
-  eventtDisplayEl.append(eventRowEl);
+  // clear the form input element
+  $(eventNameEl1).val(''); 
+ 
 }
+// Create a submit event listener on the form element
+shoppingFormEl1.on('submit', handleFormSubmit1);
 
-function handleEventSubmit(event) {
+function handleFormSubmit2(event) {
   event.preventDefault();
 
-  var eventName = eventNameInputEl.val().trim();
+  // select form element by its `name` attribute and get its value
+  var eventItem2 = $(eventNameEl2).val();
 
-  printEventData(eventName);
+  //eventNameInputEl.setAttribute("style", "display: none");
+  // if there's nothing in the form entered, don't print to the page
+  if (!eventItem2) {
+    console.log('No shopping item filled out in form!');
+    return;
+  }
+  // print to the page
+  appendEventEl2.append('<li>' + eventItem2 + '</li>');
 
+  //appendEventEl.setAttribute("style", "display: block");
+
+  // clear the form input element
+  $(eventNameEl2).val(''); 
+ 
 }
+// Create a submit event listener on the form element
+shoppingFormEl2.on('submit', handleFormSubmit2);
 
-saveEventEl.on('Save', handleEventSubmit);
+function handleFormSubmit3(event) {
+  event.preventDefault();
+
+  // select form element by its `name` attribute and get its value
+  var eventItem3 = $(eventNameEl3).val();
+
+  //eventNameInputEl.setAttribute("style", "display: none");
+  // if there's nothing in the form entered, don't print to the page
+  if (!eventItem3) {
+    console.log('No shopping item filled out in form!');
+    return;
+  }
+  // print to the page
+  appendEventEl3.append('<li>' + eventItem3 + '</li>');
+
+  //appendEventEl.setAttribute("style", "display: block");
+
+  // clear the form input element
+  $(eventNameEl3).val(''); 
+ 
+}
+// Create a submit event listener on the form element
+shoppingFormEl3.on('submit', handleFormSubmit3);
+
+function handleFormSubmit4(event) {
+  event.preventDefault();
+
+  // select form element by its `name` attribute and get its value
+  var eventItem4 = $(eventNameEl4).val();
+
+  //eventNameInputEl.setAttribute("style", "display: none");
+  // if there's nothing in the form entered, don't print to the page
+  if (!eventItem4) {
+    console.log('No shopping item filled out in form!');
+    return;
+  }
+  // print to the page
+  appendEventEl4.append('<li>' + eventItem4 + '</li>');
+
+  //appendEventEl.setAttribute("style", "display: block");
+
+  // clear the form input element
+  $(eventNameEl4).val(''); 
+ 
+}
+// Create a submit event listener on the form element
+shoppingFormEl4.on('submit', handleFormSubmit4);
+
+function handleFormSubmit5(event) {
+  event.preventDefault();
+
+  // select form element by its `name` attribute and get its value
+  var eventItem5 = $(eventNameEl5).val();
+
+  //eventNameInputEl.setAttribute("style", "display: none");
+  // if there's nothing in the form entered, don't print to the page
+  if (!eventItem5) {
+    console.log('No shopping item filled out in form!');
+    return;
+  }
+  // print to the page
+  appendEventEl5.append('<li>' + eventItem5 + '</li>');
+
+  //appendEventEl.setAttribute("style", "display: block");
+
+  // clear the form input element
+  $(eventNameEl5).val(''); 
+ 
+}
+// Create a submit event listener on the form element
+shoppingFormEl5.on('submit', handleFormSubmit5);
+
+function handleFormSubmit6(event) {
+  event.preventDefault();
+
+  // select form element by its `name` attribute and get its value
+  var eventItem6 = $(eventNameEl6).val();
+
+  //eventNameInputEl.setAttribute("style", "display: none");
+  // if there's nothing in the form entered, don't print to the page
+  if (!eventItem6) {
+    console.log('No shopping item filled out in form!');
+    return;
+  }
+  // print to the page
+  appendEventEl6.append('<li>' + eventItem6 + '</li>');
+
+  //appendEventEl.setAttribute("style", "display: block");
+
+  // clear the form input element
+  $(eventNameEl6).val(''); 
+ 
+}
+// Create a submit event listener on the form element
+shoppingFormEl6.on('submit', handleFormSubmit6);
+
+function handleFormSubmit7(event) {
+  event.preventDefault();
+
+  // select form element by its `name` attribute and get its value
+  var eventItem7 = $(eventNameEl7).val();
+
+  //eventNameInputEl.setAttribute("style", "display: none");
+  // if there's nothing in the form entered, don't print to the page
+  if (!eventItem7) {
+    console.log('No shopping item filled out in form!');
+    return;
+  }
+  // print to the page
+  appendEventEl7.append('<li>' + eventItem7 + '</li>');
+
+  //appendEventEl.setAttribute("style", "display: block");
+
+  // clear the form input element
+  $(eventNameEl7).val(''); 
+ 
+}
+// Create a submit event listener on the form element
+shoppingFormEl7.on('submit', handleFormSubmit7);
+
+function handleFormSubmit8(event) {
+  event.preventDefault();
+
+  // select form element by its `name` attribute and get its value
+  var eventItem8 = $(eventNameEl8).val();
+
+  //eventNameInputEl.setAttribute("style", "display: none");
+  // if there's nothing in the form entered, don't print to the page
+  if (!eventItem8) {
+    console.log('No shopping item filled out in form!');
+    return;
+  }
+  // print to the page
+  appendEventEl8.append('<li>' + eventItem8 + '</li>');
+
+  //appendEventEl.setAttribute("style", "display: block");
+
+  // clear the form input element
+  $(eventNameEl8).val(''); 
+ 
+}
+// Create a submit event listener on the form element
+shoppingFormEl8.on('submit', handleFormSubmit8);
