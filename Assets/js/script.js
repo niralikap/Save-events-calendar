@@ -55,11 +55,17 @@ var shoppingFormEl6 = $('#shopping-form6');
 var shoppingFormEl7 = $('#shopping-form7');
 var shoppingFormEl8 = $('#shopping-form8');
 
-// handle displaying the time
-/*function displayTime() {
-    var rightNow = moment().format('DDD, MMM DD');
-    currentDayEl.text(rightNow);
-  }*/
+renderLastEvent();
+renderLastEvent1();
+renderLastEvent2();
+renderLastEvent3();
+renderLastEvent4();
+renderLastEvent5();
+renderLastEvent6();
+renderLastEvent7();
+renderLastEvent8();
+
+
 
 var dayWeek = moment().format("dddd,  MMMM Do")
 currentDayEl.text(dayWeek);
@@ -77,6 +83,9 @@ var time6ToCompare = moment(time6El.text(),["hA"]).format("HH A");
 var time7ToCompare = moment(time7El.text(),["hA"]).format("HH A");
 var time8ToCompare = moment(time8El.text(),["hA"]).format("HH A");
 var time9ToCompare = moment(time9El.text(),["hA"]).format("HH A");
+
+
+
 //timeEl = time.value;
 console.log(time); 
 console.log(time1El.text());
@@ -85,6 +94,9 @@ console.log(time2ToCompare == time);
 console.log(time3ToCompare == time);
 console.log(time5ToCompare > time);
 //console.log(time1ToCompare.isBefore(time));
+
+
+
 function CompareTime1(time1ToCompare){
 if(time1ToCompare == time){
   event1DescEl.css('background-color', '#ff6961');
@@ -203,6 +215,8 @@ CompareTime6(time6ToCompare);
 CompareTime7(time7ToCompare);
 CompareTime8(time8ToCompare);
 CompareTime9(time9ToCompare);
+
+
 
 function renderLastEvent() {
   var event = localStorage.getItem("event");
