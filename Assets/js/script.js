@@ -204,19 +204,26 @@ CompareTime7(time7ToCompare);
 CompareTime8(time8ToCompare);
 CompareTime9(time9ToCompare);
 
+function renderLastEvent() {
+  var event = localStorage.getItem("event");
+  if (!event) {
+    return;
+  }
 
+  appendEventEl.textContent = event;
+}
 
 // create function to handle form submission
 function handleFormSubmit(event) {
   event.preventDefault();
-
+  var event = document.querySelector("#event-name-input").value;
   // select form element by its `name` attribute and get its value
   var eventItem = $(eventNameEl).val();
 
   //eventNameInputEl.setAttribute("style", "display: none");
   // if there's nothing in the form entered, don't print to the page
   if (!eventItem) {
-    console.log('No shopping item filled out in form!');
+    console.log('No event added in the calendar!');
     return;
   }
   // print to the page
@@ -226,21 +233,32 @@ function handleFormSubmit(event) {
 
   // clear the form input element
   $(eventNameEl).val(''); 
+  localStorage.setItem("event", event);
+  renderLastEvent();
  
 }
 // Create a submit event listener on the form element
 shoppingFormEl.on('submit', handleFormSubmit);
 
+function renderLastEvent1() {
+  var event = localStorage.getItem("event");
+  if (!event) {
+    return;
+  }
+
+  appendEventEl1.textContent = event;
+}
+
 function handleFormSubmit1(event) {
   event.preventDefault();
-
+  var event = document.querySelector("#event-name-input1").value;
   // select form element by its `name` attribute and get its value
   var eventItem1 = $(eventNameEl1).val();
 
   //eventNameInputEl.setAttribute("style", "display: none");
   // if there's nothing in the form entered, don't print to the page
   if (!eventItem1) {
-    console.log('No shopping item filled out in form!');
+    console.log('No event added in the calendar!');
     return;
   }
   // print to the page
@@ -250,21 +268,32 @@ function handleFormSubmit1(event) {
 
   // clear the form input element
   $(eventNameEl1).val(''); 
+  localStorage.setItem("event", event);
+  renderLastEvent1();
  
 }
 // Create a submit event listener on the form element
 shoppingFormEl1.on('submit', handleFormSubmit1);
 
+function renderLastEvent2() {
+  var event = localStorage.getItem("event");
+  if (!event) {
+    return;
+  }
+
+  appendEventEl2.textContent = event;
+}
+
 function handleFormSubmit2(event) {
   event.preventDefault();
-
+  var event = document.querySelector("#event-name-input2").value;
   // select form element by its `name` attribute and get its value
   var eventItem2 = $(eventNameEl2).val();
 
   //eventNameInputEl.setAttribute("style", "display: none");
   // if there's nothing in the form entered, don't print to the page
   if (!eventItem2) {
-    console.log('No shopping item filled out in form!');
+    console.log('No event added in the calendar!');
     return;
   }
   // print to the page
@@ -274,21 +303,32 @@ function handleFormSubmit2(event) {
 
   // clear the form input element
   $(eventNameEl2).val(''); 
- 
+  localStorage.setItem("event", event);
+  renderLastEvent2();
 }
+
 // Create a submit event listener on the form element
 shoppingFormEl2.on('submit', handleFormSubmit2);
 
+function renderLastEvent3() {
+  var event = localStorage.getItem("event");
+  if (!event) {
+    return;
+  }
+
+  appendEventEl3.textContent = event;
+}
+
 function handleFormSubmit3(event) {
   event.preventDefault();
-
+  var event = document.querySelector("#event-name-input3").value;
   // select form element by its `name` attribute and get its value
   var eventItem3 = $(eventNameEl3).val();
 
   //eventNameInputEl.setAttribute("style", "display: none");
   // if there's nothing in the form entered, don't print to the page
   if (!eventItem3) {
-    console.log('No shopping item filled out in form!');
+    console.log('No event added in the calendar!');
     return;
   }
   // print to the page
@@ -298,21 +338,32 @@ function handleFormSubmit3(event) {
 
   // clear the form input element
   $(eventNameEl3).val(''); 
- 
+  localStorage.setItem("event", event);
+  renderLastEvent3();
 }
+
 // Create a submit event listener on the form element
 shoppingFormEl3.on('submit', handleFormSubmit3);
 
+function renderLastEvent4() {
+  var event = localStorage.getItem("event");
+  if (!event) {
+    return;
+  }
+
+  appendEventEl4.textContent = event;
+}
+
 function handleFormSubmit4(event) {
   event.preventDefault();
-
+  var event = document.querySelector("#event-name-input4").value;
   // select form element by its `name` attribute and get its value
   var eventItem4 = $(eventNameEl4).val();
 
   //eventNameInputEl.setAttribute("style", "display: none");
   // if there's nothing in the form entered, don't print to the page
   if (!eventItem4) {
-    console.log('No shopping item filled out in form!');
+    console.log('No event added in the calendar!');
     return;
   }
   // print to the page
@@ -322,21 +373,32 @@ function handleFormSubmit4(event) {
 
   // clear the form input element
   $(eventNameEl4).val(''); 
- 
+  localStorage.setItem("event", event);
+  renderLastEvent4();
 }
+
 // Create a submit event listener on the form element
 shoppingFormEl4.on('submit', handleFormSubmit4);
 
+function renderLastEvent5() {
+  var event = localStorage.getItem("event");
+  if (!event) {
+    return;
+  }
+
+  appendEventEl5.textContent = event;
+}
+
 function handleFormSubmit5(event) {
   event.preventDefault();
-
+  var event = document.querySelector("#event-name-input5").value;
   // select form element by its `name` attribute and get its value
   var eventItem5 = $(eventNameEl5).val();
 
   //eventNameInputEl.setAttribute("style", "display: none");
   // if there's nothing in the form entered, don't print to the page
   if (!eventItem5) {
-    console.log('No shopping item filled out in form!');
+    console.log('No event added in the calendar!');
     return;
   }
   // print to the page
@@ -346,21 +408,31 @@ function handleFormSubmit5(event) {
 
   // clear the form input element
   $(eventNameEl5).val(''); 
- 
+  localStorage.setItem("event", event);
+  renderLastEvent5();
 }
 // Create a submit event listener on the form element
 shoppingFormEl5.on('submit', handleFormSubmit5);
 
+function renderLastEvent6() {
+  var event = localStorage.getItem("event");
+  if (!event) {
+    return;
+  }
+
+  appendEventEl6.textContent = event;
+}
+
 function handleFormSubmit6(event) {
   event.preventDefault();
-
+  var event = document.querySelector("#event-name-input6").value;
   // select form element by its `name` attribute and get its value
   var eventItem6 = $(eventNameEl6).val();
 
   //eventNameInputEl.setAttribute("style", "display: none");
   // if there's nothing in the form entered, don't print to the page
   if (!eventItem6) {
-    console.log('No shopping item filled out in form!');
+    console.log('No event added in the calendar!');
     return;
   }
   // print to the page
@@ -370,21 +442,32 @@ function handleFormSubmit6(event) {
 
   // clear the form input element
   $(eventNameEl6).val(''); 
- 
+  localStorage.setItem("event", event);
+  renderLastEvent6();
 }
+
 // Create a submit event listener on the form element
 shoppingFormEl6.on('submit', handleFormSubmit6);
 
+function renderLastEvent7() {
+  var event = localStorage.getItem("event");
+  if (!event) {
+    return;
+  }
+
+  appendEventEl7.textContent = event;
+}
+
 function handleFormSubmit7(event) {
   event.preventDefault();
-
+  var event = document.querySelector("#event-name-input7").value;
   // select form element by its `name` attribute and get its value
   var eventItem7 = $(eventNameEl7).val();
 
   //eventNameInputEl.setAttribute("style", "display: none");
   // if there's nothing in the form entered, don't print to the page
   if (!eventItem7) {
-    console.log('No shopping item filled out in form!');
+    console.log('No event added in the calendar!');
     return;
   }
   // print to the page
@@ -394,21 +477,31 @@ function handleFormSubmit7(event) {
 
   // clear the form input element
   $(eventNameEl7).val(''); 
- 
+  localStorage.setItem("event", event);
+  renderLastEvent7();
 }
 // Create a submit event listener on the form element
 shoppingFormEl7.on('submit', handleFormSubmit7);
 
+function renderLastEvent8() {
+  var event = localStorage.getItem("event");
+  if (!event) {
+    return;
+  }
+
+  appendEventEl8.textContent = event;
+}
+
 function handleFormSubmit8(event) {
   event.preventDefault();
-
+  var event = document.querySelector("#event-name-input8").value;
   // select form element by its `name` attribute and get its value
   var eventItem8 = $(eventNameEl8).val();
 
   //eventNameInputEl.setAttribute("style", "display: none");
   // if there's nothing in the form entered, don't print to the page
   if (!eventItem8) {
-    console.log('No shopping item filled out in form!');
+    console.log('No event added in the calendar!');
     return;
   }
   // print to the page
@@ -418,7 +511,8 @@ function handleFormSubmit8(event) {
 
   // clear the form input element
   $(eventNameEl8).val(''); 
- 
+  localStorage.setItem("event", event);
+  renderLastEvent8();
 }
 // Create a submit event listener on the form element
 shoppingFormEl8.on('submit', handleFormSubmit8);

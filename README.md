@@ -22,8 +22,9 @@ It will do the following:
 
 -When I refresh the page, then the saved events persist
 
-[!image](./Assets/images/Screenshot1.jpg)
-[!image](./Assets/images/Screenshot2.jpg)
+[!image](./Assets/images/screenshot1.jpg)
+[!image](./Assets/images/screenshot2.jpg)
+
 
 Github URL:
 https://github.com/niralikap/Save-events-calendar
